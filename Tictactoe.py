@@ -31,24 +31,24 @@ class TicTacToe():
         return False
 
     def winner(self, square, letter):
-        # check the row
+        
         row_ind = math.floor(square / 3)
         row = self.board[row_ind*3:(row_ind+1)*3]
-        # print('row', row)
+        
         if all([s == letter for s in row]):
             return True
         col_ind = square % 3
         column = [self.board[col_ind+i*3] for i in range(3)]
-        # print('col', column)
+        
         if all([s == letter for s in column]):
             return True
         if square % 2 == 0:
             diagonal1 = [self.board[i] for i in [0, 4, 8]]
-            # print('diag1', diagonal1)
+            
             if all([s == letter for s in diagonal1]):
                 return True
             diagonal2 = [self.board[i] for i in [2, 4, 6]]
-            # print('diag2', diagonal2)
+            
             if all([s == letter for s in diagonal2]):
                 return True
         return False

@@ -36,4 +36,4 @@ if len(sys.argv) == 2:
     else:
         print("Unknown command")
 else:
-    print("Please pass exactly one command.")
+   print("Please pass exactly one command.")
